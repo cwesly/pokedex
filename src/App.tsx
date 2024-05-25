@@ -1,9 +1,18 @@
+import { useState } from "react";
+import Header from "./header/header";
+
 function App() {
+  const [search, setSearch] = useState<string>("");
   return (
     <>
-     <p>Hello World!</p>
+      <Header
+        id={1}
+        pokemonName="Bulbasaur"
+        search={search}
+        setSearch={setSearch}
+      />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
