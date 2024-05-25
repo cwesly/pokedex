@@ -2,7 +2,7 @@ import { FaSearch } from "react-icons/fa";
 type SearchBarProps = {
   search: string;
   setSearch: React.Dispatch<React.SetStateAction<string>>;
-  fetchPokemon: () => Promise<void>;
+  fetchPokemon: (id?: number) => Promise<void>;
 };
 const SearchBar = ({ search, setSearch, fetchPokemon }: SearchBarProps) => {
   return (

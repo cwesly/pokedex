@@ -1,7 +1,6 @@
 import PokemonID from "../pokemonID/pokemonID";
 import PokemonName from "../pokemonName/pokemonName";
 import SearchBar from "../searchBar/searchBar";
-import { Pokemon } from "../types";
 
 type HeaderProps = {
   search: string;
