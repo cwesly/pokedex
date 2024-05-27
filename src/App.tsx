@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Header from "./header/header";
 import { Pokemon } from "./types";
+import PokemonType from "./pokemonTypeTag/pokemonTypeTag";
 
 function App() {
   const [search, setSearch] = useState<string>("1");
@@ -24,6 +25,7 @@ function App() {
         setSearch={setSearch}
         fetchPokemon={fetchPokemon}
       />
+      <PokemonType id={pokemon.id} />
     </>
   );
 }
