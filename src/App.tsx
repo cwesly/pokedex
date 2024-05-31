@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Header from "./header/header";
+import Tags from "./Tags";
 import { Pokemon } from "./types";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
   useEffect(() => {
     fetchPokemon();
   }, []);
+
   return (
     <>
       <Header
@@ -24,6 +26,7 @@ function App() {
         setSearch={setSearch}
         fetchPokemon={fetchPokemon}
       />
+      <Tags />
     </>
   );
 }
