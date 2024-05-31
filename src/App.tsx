@@ -3,6 +3,7 @@ import Header from "./header/header";
 import { Pokemon } from "./types";
 import NextButton from "./nextButton/nextButton";
 import BackButton from "./backButton/backButton";
+import "./App.css";
 
 function App() {
   const [search, setSearch] = useState<string>("1");
@@ -21,7 +22,7 @@ function App() {
     fetchPokemon();
   }, []);
   return (
-    <>
+    <main>
       <Header
         id={pokemon.id}
         pokemonName={pokemon.name}
@@ -29,9 +30,11 @@ function App() {
         setSearch={setSearch}
         fetchPokemon={fetchPokemon}
       />
-      <BackButton fetchPokemon={fetchPokemon} id={pokemon.id} />
-      <NextButton fetchPokemon={fetchPokemon} id={pokemon.id} />
-    </>
+      <section className="pokemon-view">
+        <BackButton fetchPokemon={fetchPokemon} id={pokemon.id} />
+        <NextButton fetchPokemon={fetchPokemon} id={pokemon.id} />
+      </section>
+    </main>
   );
 }
 
