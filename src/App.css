@@ -44,14 +44,4 @@ main {
   height: 9rem;
   gap: 1.5rem;
 }
-.pokemon-view button {
-  display: flex;
-  align-items: end;
-  background-color: transparent;
-  cursor: pointer;
-}
-.pokemon-view button svg {
-  height: 1.5rem;
-  width: 1.5rem;
-  fill: #ffffff;
-}
+
