@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Header from "./header/header";
 import { Pokemon, TypeButton } from "./types";
 import "./App.css";
-import PassButton from "./backButton/passButton";
+import PassButton from "./passButton/passButton";
 
 function App() {
   const [search, setSearch] = useState<string>("1");
