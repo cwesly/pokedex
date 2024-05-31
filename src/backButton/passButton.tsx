@@ -1,4 +1,5 @@
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import "./passButton.css"
 
 type PassButtonProps = {
   fetchPokemon: (id?: number) => Promise<void>;

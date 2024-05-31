@@ -43,7 +43,6 @@ main {
   display: flex;
   height: 9rem;
   gap: 1.5rem;
-  position: relative;
 }
 .pokemon-view button {
   display: flex;
