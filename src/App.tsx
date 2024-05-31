@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import Header from "./header/header";
-import { Pokemon } from "./types";
-import NextButton from "./nextButton/nextButton";
-import BackButton from "./backButton/backButton";
+import { Pokemon, TypeButton } from "./types";
+import "./App.css";
+import PassButton from "./backButton/passButton";
 
 function App() {
   const [search, setSearch] = useState<string>("1");
@@ -21,7 +21,7 @@ function App() {
     fetchPokemon();
   }, []);
   return (
-    <>
+    <main>
       <Header
         id={pokemon.id}
         pokemonName={pokemon.name}
@@ -29,9 +29,19 @@ function App() {
         setSearch={setSearch}
         fetchPokemon={fetchPokemon}
       />
-      <BackButton fetchPokemon={fetchPokemon} id={pokemon.id} />
-      <NextButton fetchPokemon={fetchPokemon} id={pokemon.id} />
-    </>
+      <section className="pokemon-view">
+        <PassButton
+          fetchPokemon={fetchPokemon}
+          id={pokemon.id}
+          type={TypeButton.Back}
+        />
+        <PassButton
+          fetchPokemon={fetchPokemon}
+          id={pokemon.id}
+          type={TypeButton.Next}
+        />
+      </section>
+    </main>
   );
 }
 
