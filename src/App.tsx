@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Header from "./header/header";
-import { Pokemon } from "./types";
+import { Pokemon, TypeButton } from "./types";
 import "./App.css";
 import PassButton from "./backButton/passButton";
 
@@ -30,8 +30,16 @@ function App() {
         fetchPokemon={fetchPokemon}
       />
       <section className="pokemon-view">
-        <PassButton fetchPokemon={fetchPokemon} id={pokemon.id} type="back" />
-        <PassButton fetchPokemon={fetchPokemon} id={pokemon.id} type="next" />
+        <PassButton
+          fetchPokemon={fetchPokemon}
+          id={pokemon.id}
+          type={TypeButton.Back}
+        />
+        <PassButton
+          fetchPokemon={fetchPokemon}
+          id={pokemon.id}
+          type={TypeButton.Next}
+        />
       </section>
     </main>
   );
