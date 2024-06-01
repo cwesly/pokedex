@@ -5,6 +5,8 @@ import ImagePokemon from "./imagePokemon/imagePokemon";
 import { Pokemon, TypeButton } from "./types";
 import "./App.css";
 import Tags from "./tags/tags";
+import About from "./about/about";
+import BaseStats from "./baseStats/baseStats";
 
 function App() {
   const [search, setSearch] = useState<string>("1");
@@ -12,6 +14,9 @@ function App() {
     name: "",
     id: 0,
     types: [],
+    weight: 0,
+    height: 0,
+    stats: [],
   });
 
   const fetchPokemon = async (id?: number) => {
@@ -51,6 +56,8 @@ function App() {
         />
       </section>
       <Tags types={pokemon.types} />
+      <About pokemon={pokemon} />
+      <BaseStats stats={pokemon.stats} />
     </main>
   );
 }
