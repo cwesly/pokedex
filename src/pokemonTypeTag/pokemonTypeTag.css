@@ -1,0 +1,9 @@
+.tag-type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #7e7e7e;
+  padding-inline: 1.25rem;
+  border-radius: 1.87rem;
+  color: #ffffff;
+}
