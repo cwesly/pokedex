@@ -1,3 +1,4 @@
+import PokemonTypeTag from "../pokemonTypeTag/pokemonTypeTag";
 import { PokemonType } from "../types";
 
 type TagsProp = {
@@ -7,11 +8,9 @@ type TagsProp = {
 const Tags = ({ types }: TagsProp) => {
   return (
     <div>
-      <ul>
-        {types.map((pokemontype) => (
-          <p key={pokemontype.type.name}>{pokemontype.type.name}</p>
-        ))}
-      </ul>
+      {types.map((pokemontype) => (
+        <PokemonTypeTag name={pokemontype.type.name} />
+      ))}
     </div>
   );
 };
