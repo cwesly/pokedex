@@ -1,7 +1,7 @@
 import PokemonID from "../pokemonID/pokemonID";
 import PokemonName from "../pokemonName/pokemonName";
 import SearchBar from "../searchBar/searchBar";
-
+import "./header.css"
 type HeaderProps = {
   search: string;
   setSearch: React.Dispatch<React.SetStateAction<string>>;
@@ -18,7 +18,7 @@ const Header = ({
   fetchPokemon,
 }: HeaderProps) => {
   return (
-    <header>
+    <header className="pokemon-header">
       <PokemonName pokemonName={pokemonName} />
       <SearchBar
         search={search}

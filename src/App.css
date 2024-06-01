@@ -8,6 +8,7 @@
 }
 
 :root {
+  --white-color: #ffff
   --bug-color: #a7b723;
   --dark-color: #75574c;
   --dragon-color: #7037ff;
@@ -42,6 +43,6 @@ main {
 .pokemon-view {
   display: flex;
   height: 9rem;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
