@@ -28,6 +28,10 @@ function App() {
     fetchPokemon();
   }, []);
 
+  const fistType = pokemon.types[0]?.type.name;
+
+  document.body.style.backgroundColor = `var(--${fistType}-color)`;
+
   return (
     <main>
       <Header
