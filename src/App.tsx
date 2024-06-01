@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import Header from "./header/header";
+import PassButton from "./passButton/passButton";
+import ImagePokemon from "./imagePokemon/imagePokemon";
 import { Pokemon, TypeButton } from "./types";
 import "./App.css";
-import PassButton from "./backButton/passButton";
 
 function App() {
   const [search, setSearch] = useState<string>("1");
@@ -35,6 +36,7 @@ function App() {
           id={pokemon.id}
           type={TypeButton.Back}
         />
+        <ImagePokemon id={pokemon.id} />
         <PassButton
           fetchPokemon={fetchPokemon}
           id={pokemon.id}
