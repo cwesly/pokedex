@@ -10,7 +10,10 @@ const Tags = ({ types }: TagsProp) => {
   return (
     <div className="tags">
       {types.map((pokemontype) => (
-        <PokemonTypeTag name={pokemontype.type.name} />
+        <PokemonTypeTag
+          name={pokemontype.type.name}
+          key={pokemontype.type.name}
+        />
       ))}
     </div>
   );
