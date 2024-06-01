@@ -1,7 +1,7 @@
 import PokemonID from "../pokemonID/pokemonID";
 import PokemonName from "../pokemonName/pokemonName";
 import SearchBar from "../searchBar/searchBar";
-import { Pokemon } from "../types";
+import "./header.css";
 
 type HeaderProps = {
   search: string;
@@ -19,12 +19,13 @@ const Header = ({
   fetchPokemon,
 }: HeaderProps) => {
   return (
-    <header>
+    <header className="pokemon-header">
       <PokemonName pokemonName={pokemonName} />
       <SearchBar
         search={search}
         setSearch={setSearch}
         fetchPokemon={fetchPokemon}
+        placeholder="Name or Id"
       />
       <PokemonID id={id} />
     </header>

@@ -8,6 +8,7 @@
 }
 
 :root {
+  --white-color: #ffff
   --bug-color: #a7b723;
   --dark-color: #75574c;
   --dragon-color: #7037ff;
@@ -27,3 +28,21 @@
   --steel-color: #b7b9d0;
   --water-color: #6493eb;
 }
+body {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--grass-color);
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.3rem;
+}
+.pokemon-view {
+  display: flex;
+  height: 9rem;
+  gap: 2rem;
+}
+

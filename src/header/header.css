@@ -1,0 +1,10 @@
+.pokemon-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 38rem; 
+  font-weight: bold;
+  color: white;
+  padding-top: 1.7rem;
+  padding-bottom: 2rem;
+}
