@@ -15,6 +15,7 @@ function App() {
     );
     const pokemonData = await data.json();
     setPokemon(pokemonData);
+    setSearch("");
     return;
   };
 
