@@ -1,8 +1,10 @@
-type PokemonNameProp = {
-    pokemonName: string
-}
+import "./pokemonName.css";
 
-const PokemonName = ({pokemonName}: PokemonNameProp) =>{
-    return(<h1>{pokemonName}</h1>)
-}
-export default PokemonName
+type PokemonNameProp = {
+  pokemonName: string;
+};
+
+const PokemonName = ({ pokemonName }: PokemonNameProp) => {
+  return <h1 className="pokemon-title">{pokemonName}</h1>;
+};
+export default PokemonName;

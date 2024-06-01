@@ -1,23 +1,35 @@
 import { useEffect, useState } from "react";
 import Header from "./header/header";
-import { Pokemon } from "./types";
-import PokemonType from "./pokemonTypeTag/pokemonTypeTag";
+import PassButton from "./passButton/passButton";
+import ImagePokemon from "./imagePokemon/imagePokemon";
+import { Pokemon, TypeButton } from "./types";
+import "./App.css";
+import Tags from "./tags/Tags";
 
 function App() {
   const [search, setSearch] = useState<string>("1");
-  const [pokemon, setPokemon] = useState<Pokemon>({ name: "", id: 0 });
+  const [pokemon, setPokemon] = useState<Pokemon>({
+    name: "",
+    id: 0,
+    types: [],
+  });
 
-  const fetchPokemon = async () => {
-    const data = await fetch(`https://pokeapi.co/api/v2/pokemon/${search}`);
+  const fetchPokemon = async (id?: number) => {
+    const data = await fetch(
+      `https://pokeapi.co/api/v2/pokemon/${id ? id : search}`
+    );
     const pokemonData = await data.json();
     setPokemon(pokemonData);
+    setSearch("");
+    return;
   };
 
   useEffect(() => {
     fetchPokemon();
   }, []);
+
   return (
-    <>
+    <main>
       <Header
         id={pokemon.id}
         pokemonName={pokemon.name}
@@ -25,8 +37,21 @@ function App() {
         setSearch={setSearch}
         fetchPokemon={fetchPokemon}
       />
-      <PokemonType id={pokemon.id} />
-    </>
+      <section className="pokemon-view">
+        <PassButton
+          fetchPokemon={fetchPokemon}
+          id={pokemon.id}
+          type={TypeButton.Back}
+        />
+        <ImagePokemon id={pokemon.id} />
+        <PassButton
+          fetchPokemon={fetchPokemon}
+          id={pokemon.id}
+          type={TypeButton.Next}
+        />
+      </section>
+      <Tags types={pokemon.types} />
+    </main>
   );
 }
 
