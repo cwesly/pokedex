@@ -1,11 +1,15 @@
 import { useEffect, useState } from "react";
 import Header from "./header/header";
-import Tags from "./Tags";
 import { Pokemon } from "./types";
+import Tags from "./tags/Tags";
 
 function App() {
   const [search, setSearch] = useState<string>("1");
-  const [pokemon, setPokemon] = useState<Pokemon>({ name: "", id: 0 });
+  const [pokemon, setPokemon] = useState<Pokemon>({
+    name: "",
+    id: 0,
+    types: [],
+  });
 
   const fetchPokemon = async () => {
     const data = await fetch(`https://pokeapi.co/api/v2/pokemon/${search}`);
@@ -26,7 +30,7 @@ function App() {
         setSearch={setSearch}
         fetchPokemon={fetchPokemon}
       />
-      <Tags />
+      <Tags types={pokemon.types} />
     </>
   );
 }

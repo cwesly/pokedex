@@ -1,9 +1,14 @@
-// src/types.ts
 export interface Pokemon {
   name: string;
   id: number;
+  types: PokemonType[]
 }
 
 export interface PokemonType {
-  name: string;
+  type: PokemonTypeName ;
+
+}
+
+type PokemonTypeName = {
+  name: string
 }
