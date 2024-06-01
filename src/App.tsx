@@ -4,7 +4,7 @@ import PassButton from "./passButton/passButton";
 import ImagePokemon from "./imagePokemon/imagePokemon";
 import { Pokemon, TypeButton } from "./types";
 import "./App.css";
-import Tags from "./tags/Tags";
+import Tags from "./tags/tags";
 
 function App() {
   const [search, setSearch] = useState<string>("1");
