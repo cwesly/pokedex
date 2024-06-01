@@ -4,10 +4,15 @@ import PassButton from "./passButton/passButton";
 import ImagePokemon from "./imagePokemon/imagePokemon";
 import { Pokemon, TypeButton } from "./types";
 import "./App.css";
+import Tags from "./tags/Tags";
 
 function App() {
   const [search, setSearch] = useState<string>("1");
-  const [pokemon, setPokemon] = useState<Pokemon>({ name: "", id: 0 });
+  const [pokemon, setPokemon] = useState<Pokemon>({
+    name: "",
+    id: 0,
+    types: [],
+  });
 
   const fetchPokemon = async (id?: number) => {
     const data = await fetch(
@@ -22,6 +27,7 @@ function App() {
   useEffect(() => {
     fetchPokemon();
   }, []);
+
   return (
     <main>
       <Header
@@ -44,6 +50,7 @@ function App() {
           type={TypeButton.Next}
         />
       </section>
+      <Tags types={pokemon.types} />
     </main>
   );
 }
