@@ -28,8 +28,10 @@ function App() {
     fetchPokemon();
   }, []);
 
+  const fistType = pokemon.types[0]?.type.name;
+
   return (
-    <main>
+    <main style={{ background: `var(--${fistType}-color)` }}>
       <Header
         id={pokemon.id}
         pokemonName={pokemon.name}
