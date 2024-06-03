@@ -30,10 +30,8 @@ function App() {
 
   const fistType = pokemon.types[0]?.type.name;
 
-  document.body.style.backgroundColor = `var(--${fistType}-color)`;
-
   return (
-    <main>
+    <main style={{ background: `var(--${fistType}-color)` }}>
       <Header
         id={pokemon.id}
         pokemonName={pokemon.name}

@@ -28,17 +28,12 @@
   --steel-color: #b7b9d0;
   --water-color: #6493eb;
 }
-body {
-  display: flex;
-  justify-content: center;
-  height: 100vh;
-  background-color: var(--grass-color);
-}
+
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0.3rem;
+  height: 100vh;
 }
 .pokemon-view {
   display: flex;
