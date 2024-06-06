@@ -5,7 +5,7 @@ type StatProps = {
 
 const Stat = ({ name, value }: StatProps) => {
   return (
-    <div>
+    <div className="base-stat-ifo">
       <p>{name.toUpperCase()}:</p>
       <p>{value}</p>
     </div>
