@@ -40,3 +40,15 @@ main {
   height: 9rem;
   gap: 2rem;
 }
+.container-about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 7rem;
+  padding-block: 0.85rem;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0rem 1.875rem 3.75rem -0.75rem inset,
+    rgba(0, 0, 0, 0.2) 0rem 1.125rem 2.25rem -1.125rem inset;
+}

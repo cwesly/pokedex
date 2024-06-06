@@ -57,9 +57,11 @@ function App() {
           type={TypeButton.Next}
         />
       </section>
-      <Tags types={pokemon.types} />
-      <About pokemon={pokemon} />
-      <BaseStats stats={pokemon.stats} />
+      <section className="container-about">
+        <Tags types={pokemon.types} />
+        <About pokemon={pokemon} />
+        <BaseStats stats={pokemon.stats} />
+      </section>
     </main>
   );
 }
