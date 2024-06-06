@@ -1,0 +1,14 @@
+.base-stats{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.4rem;
+}
+.base-stats h3 {
+  padding: 0.4rem;
+}
+.base-stat-ifo{
+  font-weight: 600;
+  display: flex;
+  gap: 0.5rem;
+}

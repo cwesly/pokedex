@@ -1,7 +1,10 @@
 export interface Pokemon {
   name: string;
   id: number;
-  types: PokemonType[]
+  types: PokemonType[];
+  height: number;
+  weight: number;
+  stats: PokemonStat[]
 };
 
 export enum TypeButton {
@@ -15,5 +18,14 @@ export interface PokemonType {
 }
 
 type PokemonTypeName = {
+  name: string
+}
+
+export type PokemonStat = {
+  base_stat: number,
+  stat: Stat
+}
+
+type Stat = {
   name: string
 }
