@@ -59,8 +59,8 @@ function App() {
       </section>
       <section className="container-about">
         <Tags types={pokemon.types} />
-        <About pokemon={pokemon} />
-        <BaseStats stats={pokemon.stats} />
+        <About pokemon={pokemon} type={fistType} />
+        <BaseStats stats={pokemon.stats} type={fistType} />
       </section>
     </main>
   );
