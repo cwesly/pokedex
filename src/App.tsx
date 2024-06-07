@@ -3,10 +3,8 @@ import Header from "./header/header";
 import PassButton from "./passButton/passButton";
 import ImagePokemon from "./imagePokemon/imagePokemon";
 import { Pokemon, TypeButton } from "./types";
+import CardAbout from "./cardAbout/cardAbout";
 import "./App.css";
-import Tags from "./tags/tags";
-import About from "./about/about";
-import BaseStats from "./baseStats/baseStats";
 
 function App() {
   const [search, setSearch] = useState<string>("1");
@@ -57,11 +55,7 @@ function App() {
           type={TypeButton.Next}
         />
       </section>
-      <section className="container-about">
-        <Tags types={pokemon.types} />
-        <About pokemon={pokemon} type={fistType} />
-        <BaseStats stats={pokemon.stats} type={fistType} />
-      </section>
+      <CardAbout pokemon={pokemon} typeColor={fistType} />
     </main>
   );
 }
