@@ -4,12 +4,13 @@ import "./baseStats.css";
 
 type BaseStatsProp = {
   stats: PokemonStat[];
+  type: string;
 };
 
-const BaseStats = ({ stats }: BaseStatsProp) => {
+const BaseStats = ({ stats , type }: BaseStatsProp) => {
   return (
     <div className="base-stats">
-      <h3>Base Stats</h3>
+      <h3 style={{ color: `var(--${type}-color)` }}>Base Stats</h3>
       {stats.map((currentStat) => (
         <Stat
           name={currentStat.stat.name}
