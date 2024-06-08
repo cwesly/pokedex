@@ -1,6 +1,6 @@
 import About from "../about/about";
 import BaseStats from "../baseStats/baseStats";
-import Tags from "../tags/tags";
+import Tags from "../tags/Tags";
 import { Pokemon } from "./../types";
 import "./cardAbout.css";
 
